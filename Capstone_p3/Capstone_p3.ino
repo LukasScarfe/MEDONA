@@ -38,16 +38,14 @@ void setup() {
 }
 
 void loop() {
-  separation=0;
   if(Serial.available() > 0){
     while (Serial.available() > 0)  //See if data is there
     {
       incomingByte= Serial.readString();  //Read a byte
       delay(50);
-      separation=incomingByte.toInt();
-      Serial.println(incomingByte);
+      desiredpos=incomingByte.toInt();
+      Serial.println(separation);
     } 
-  desiredpos=separation;
 
   inita1=pow(initpos, 2.8207796311);
   inita=0.0001878373*inita1;
