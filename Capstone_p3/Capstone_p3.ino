@@ -12,7 +12,7 @@ float separation;
 int i=0;
 
 //stage displacement (mm)
-int initpos=20; //input initial position
+int initpos=26; //input initial position
 int desiredpos; //input desired position
 
 //no. motor rotations
@@ -38,19 +38,25 @@ void setup() {
 }
 
 void loop() {
+
+  initpos=initpos;
   if(Serial.available() > 0){
     while (Serial.available() > 0)  //See if data is there
     {
       incomingByte= Serial.readString();  //Read a byte
       delay(50);
       desiredpos=incomingByte.toInt();
-      Serial.println(separation);
+      Serial.println(desiredpos);
     } 
 
   inita1=pow(initpos, 2.8207796311);
   inita=0.0001878373*inita1;
   desireda1=pow(desiredpos, 2.8207796311);
   desireda=0.0001878373*desireda1;
+
+ //inita=(0.0088*(pow(initpos, 2)))-(0.3675*initpos)+3.9582; //calc init no. step using formula
+  inita=(0.0088*(pow(initpos, 2)))-(0.3675*desiredpos)+3.9582;
+  desireda=(0.0088*(pow(desiredpos, 2)))-(0.3675*desiredpos)+3.9582; //calc desired no. step using formula
   
   deltaa=desireda-inita;
   nostep=abs(deltaa)*200;
