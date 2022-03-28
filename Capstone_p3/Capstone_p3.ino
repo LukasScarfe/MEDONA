@@ -3,8 +3,8 @@
 #include <SoftwareSerial.h>
 
 //define pin numbers for steps and direction
-const int stpPin=8; //digital pin 2
-const int dirPin=9; //digital pin 3
+const int stpPin=2; //digital pin 2
+const int dirPin=3; //digital pin 3
 
 
 String incomingByte;
