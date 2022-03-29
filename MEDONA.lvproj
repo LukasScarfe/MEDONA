@@ -90,7 +90,7 @@
 				<Property Name="INST_defaultDir" Type="Str">{1F9689F5-C811-4A5B-9346-D202E11033E0}</Property>
 				<Property Name="INST_installerName" Type="Str">Medonainstall.exe</Property>
 				<Property Name="INST_productName" Type="Str">MEDONA</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.1</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.2</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">20008011</Property>
 				<Property Name="MSI_arpCompany" Type="Str">MeDoNA</Property>
@@ -133,7 +133,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1BBA07D2-F3BA-45D3-A220-18718DB27391}</Property>
-				<Property Name="Bld_version.build" Type="Int">8</Property>
+				<Property Name="Bld_version.build" Type="Int">9</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Medona.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Medona Software/Medona.exe</Property>
